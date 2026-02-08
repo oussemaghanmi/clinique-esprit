@@ -116,3 +116,17 @@ LOGOUT_REDIRECT_URL = '/admin/login/'
 # Configuration HTTPS
 CSRF_TRUSTED_ORIGINS = ['https://192.168.210.50']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# Création automatique d'un superuser admin si aucun n'existe (pour Render / démo)
+if DEBUG:
+    try:
+        from django.contrib.auth import get_user_model
+        User = get_user_model()
+        if not User.objects.filter(username="admin").exists():
+            User.objects.create_superuser(
+                username="admin",
+                email="admin@example.com",
+                password="Admin@Clinic2026",
+            )
+    except Exception:
+        # Ne jamais casser le démarrage si la DB n'est pas prête
+        pass
