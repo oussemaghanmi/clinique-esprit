@@ -10,7 +10,13 @@ SECRET_KEY = 'django-insecure-clinic@2026-Tunisia-DMZ-Project!ChangeInProduction
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.210.50', 'localhost', '127.0.0.1', 'clinique.local']
+ALLOWED_HOSTS = [
+    '192.168.210.50',
+    'localhost',
+    '127.0.0.1',
+    'clinique.local',
+    'clinique-esprit.onrender.com',
+]
 
 # Application definition
 INSTALLED_APPS = [
