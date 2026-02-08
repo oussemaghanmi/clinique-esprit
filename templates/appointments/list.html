@@ -1,0 +1,57 @@
+{% extends 'base/base.html' %}
+{% block title %}Rendez-vous - Clinique{% endblock %}
+
+{% block content %}
+<section class="space-y-6 animate-fade-in">
+  <header class="flex items-center justify-between">
+    <div>
+      <h2 class="text-2xl font-semibold text-slate-900">Rendez-vous</h2>
+      <p class="text-sm text-slate-500 mt-1">Consultations planifiées.</p>
+    </div>
+    <button class="px-4 py-2 rounded-lg bg-primary-600 text-sm text-white hover:bg-primary-700 transition">
+      Nouveau rendez-vous
+    </button>
+  </header>
+
+  <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50">
+        <tr>
+          <th class="px-4 py-2 text-left font-medium text-slate-500">Date / heure</th>
+          <th class="px-4 py-2 text-left font-medium text-slate-500">Patient</th>
+          <th class="px-4 py-2 text-left font-medium text-slate-500">Médecin</th>
+          <th class="px-4 py-2 text-left font-medium text-slate-500">Motif</th>
+          <th class="px-4 py-2 text-left font-medium text-slate-500">Statut</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        {% for r in rdv_list %}
+        <tr class="hover:bg-slate-50 transition">
+          <td class="px-4 py-2 text-slate-800">
+            {{ r.date_heure|date:"d/m/Y" }} à {{ r.date_heure|time:"H:i" }}
+          </td>
+          <td class="px-4 py-2 text-slate-800">{{ r.patient.nom_complet }}</td>
+          <td class="px-4 py-2 text-slate-800">{{ r.medecin }}</td>
+          <td class="px-4 py-2 text-slate-700">{{ r.motif }}</td>
+          <td class="px-4 py-2">
+            <span class="px-2 py-1 rounded-full text-xs
+              {% if r.statut == 'CONFIRME' %} bg-emerald-50 text-emerald-700
+              {% elif r.statut == 'ATTENTE' %} bg-amber-50 text-amber-700
+              {% elif r.statut == 'ANNULE' %} bg-rose-50 text-rose-700
+              {% else %} bg-slate-50 text-slate-700 {% endif %}">
+              {{ r.get_statut_display }}
+            </span>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="5" class="px-4 py-8 text-center text-slate-400">
+            Aucun rendez-vous planifié.
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

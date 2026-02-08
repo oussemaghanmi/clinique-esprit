@@ -1,0 +1,175 @@
+{% extends "base_public.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- HERO -->
+<section id="hero" class="py-5 bg-primary text-white">
+  <div class="container d-flex flex-column flex-lg-row align-items-center">
+    <div class="flex-grow-1">
+      <h1 class="display-5 fw-bold mb-3">Clinique Esprit</h1>
+      <p class="lead mb-4">
+        Clinique pluridisciplinaire à Tunis offrant des soins de haute qualité,
+        un plateau technique moderne et une équipe médicale expérimentée.
+      </p>
+      <div class="d-flex flex-wrap gap-2">
+        <a href="#rdv" class="btn btn-primary btn-lg">
+          Demander un rendez-vous
+        </a>
+        <a href="#services" class="btn btn-outline-light btn-lg">
+          Nos spécialités
+        </a>
+      </div>
+    </div>
+    <div class="mt-4 mt-lg-0 ms-lg-5">
+      <img src="{% static 'img/clinique-exterieur.jpg' %}"
+           class="img-fluid rounded shadow"
+           alt="Clinique Esprit">
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Nos pôles d’excellence</h2>
+      <p class="text-muted">
+        Une prise en charge complète, de la consultation au suivi post‑opératoire.
+      </p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="mb-3 text-primary fs-2">
+              <i class="bi bi-heart-pulse-fill"></i>
+            </div>
+            <h5 class="card-title">Cardiologie & chirurgie cardiaque</h5>
+            <p class="card-text text-muted">
+              Explorations cardiaques, coronarographie, chirurgie cardiaque
+              avec réanimation spécialisée.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="mb-3 text-primary fs-2">
+              <i class="bi bi-person-bounding-box"></i>
+            </div>
+            <h5 class="card-title">Chirurgie esthétique & réparatrice</h5>
+            <p class="card-text text-muted">
+              Interventions esthétiques réalisées dans un bloc opératoire
+              aux normes internationales.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="mb-3 text-primary fs-2">
+              <i class="bi bi-bandaid-fill"></i>
+            </div>
+            <h5 class="card-title">Orthopédie & traumatologie</h5>
+            <p class="card-text text-muted">
+              Chirurgie prothétique, arthroscopie, traumatologie du sport
+              avec plateau d’imagerie complet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLINIQUE ESPRIT EN CHIFFRES -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-1" style="color:#c79c2b;">CLINIQUE ESPRIT</h2>
+    <p class="fs-5 mb-5" style="color:#004b8d;">EN CHIFFRES</p>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-md-3">
+        <div class="mb-3">
+          <img src="{% static 'img/icon-lits.png' %}" alt="Lits" width="72">
+        </div>
+        <div class="ce-stat-number">120</div>
+        <div class="ce-stat-label">Capacité en lits</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="mb-3">
+          <img src="{% static 'img/icon-reanimation.png' %}" alt="Réanimation" width="72">
+        </div>
+        <div class="ce-stat-number">20</div>
+        <div class="ce-stat-label">Lits de réanimation</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="mb-3">
+          <img src="{% static 'img/icon-bloc.png' %}" alt="Blocs" width="72">
+        </div>
+        <div class="ce-stat-number">6</div>
+        <div class="ce-stat-label">Salles d’opération</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="mb-3">
+          <img src="{% static 'img/icon-flag.png' %}" alt="Nationalités" width="72">
+        </div>
+        <div class="ce-stat-number">30</div>
+        <div class="ce-stat-label">Nationalités accueillies</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOC RDV -->
+<section id="rdv" class="py-5 bg-white">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-3">Prendre rendez-vous</h2>
+        <p class="text-muted">
+          Remplissez le formulaire ou contactez‑nous directement pour organiser
+          votre prise en charge à la Clinique Esprit.
+        </p>
+        <ul class="list-unstyled text-muted">
+          <li><i class="bi bi-geo-alt-fill text-primary me-2"></i>Tunis, Tunisie</li>
+          <li><i class="bi bi-telephone-fill text-primary me-2"></i>+216 XX XXX XXX</li>
+          <li><i class="bi bi-envelope-fill text-primary me-2"></i>contact@clinique-esprit.tn</li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <form class="card border-0 shadow-sm p-4">
+          <div class="mb-3">
+            <label class="form-label">Nom complet</label>
+            <input type="text" class="form-control" placeholder="Votre nom">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Adresse e‑mail</label>
+            <input type="email" class="form-control" placeholder="vous@example.com">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Spécialité souhaitée</label>
+            <select class="form-select">
+              <option>Cardiologie</option>
+              <option>Chirurgie esthétique</option>
+              <option>Orthopédie</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">
+            Envoyer la demande
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base/base.html' %}
+{% block title %}Facturation - Clinique{% endblock %}
+
+{% block content %}
+<section class="space-y-6 animate-fade-in">
+  <header class="flex items-center justify-between">
+    <div>
+      <h2 class="text-2xl font-semibold text-slate-900">Factures</h2>
+      <p class="text-sm text-slate-500 mt-1">Suivi de la facturation et des paiements.</p>
+    </div>
+    <button class="px-4 py-2 rounded-lg bg-primary-600 text-sm text-white hover:bg-primary-700 transition">
+      Nouvelle facture
+    </button>
+  </header>
+
+  <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50">
+        <tr>
+          <th class="px-4 py-2 text-left font-medium text-slate-500">N° facture</th>
+          <th class="px-4 py-2 text-left font-medium text-slate-500">Patient</th>
+          <th class="px-4 py-2 text-left font-medium text-slate-500">Émise le</th>
+          <th class="px-4 py-2 text-left font-medium text-slate-500">Montant TTC</th>
+          <th class="px-4 py-2 text-left font-medium text-slate-500">Statut</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-100">
+        {% for f in factures %}
+        <tr class="hover:bg-slate-50 transition">
+          <td class="px-4 py-2 font-mono text-xs text-slate-700">{{ f.numero_facture }}</td>
+          <td class="px-4 py-2 text-slate-800">{{ f.patient.nom_complet }}</td>
+          <td class="px-4 py-2 text-slate-700">{{ f.date_emission|date:"d/m/Y" }}</td>
+          <td class="px-4 py-2 text-slate-800">{{ f.montant_ttc }} TND</td>
+          <td class="px-4 py-2">
+            <span class="px-2 py-1 rounded-full text-xs
+              {% if f.statut == 'PAYEE' %} bg-emerald-50 text-emerald-700
+              {% elif f.statut == 'BROUILLON' %} bg-slate-50 text-slate-700
+              {% elif f.statut == 'EMISE' %} bg-amber-50 text-amber-700
+              {% elif f.statut == 'PARTIELLE' %} bg-sky-50 text-sky-700
+              {% else %} bg-rose-50 text-rose-700 {% endif %}">
+              {{ f.get_statut_display }}
+            </span>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="5" class="px-4 py-8 text-center text-slate-400">
+            Aucune facture enregistrée.
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Clinique Moderne{% endblock %}</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Alpine.js pour interactivité légère -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Icons (Tabler) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+    <!-- Configuration Tailwind personnalisée -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                200: '#bfdbfe',
+                300: '#93c5fd',
+                400: '#60a5fa',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+                800: '#1e40af',
+                900: '#1e3a8a',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.4s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(4px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- CSS personnalisé (scrollbar simple) -->
+    <style>
+        ::-webkit-scrollbar {
+            width: 7px;
+            height: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e5e7eb;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #9ca3af;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+    </style>
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    {% if user.is_authenticated %}
+    <!-- Layout connecté -->
+    <div class="flex h-screen overflow-hidden" x-data="{ sidebarOpen: true }">
+
+        <!-- Sidebar -->
+        <aside
+            x-show="sidebarOpen"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="-translate-x-full"
+            x-transition:enter-end="translate-x-0"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="translate-x-0"
+            x-transition:leave-end="-translate-x-full"
+            class="fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-slate-200 shadow-sm lg:relative lg:translate-x-0"
+        >
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-16 px-6 border-b border-slate-200">
+                <h1 class="text-xl font-semibold text-slate-900">
+                    <span class="text-primary-600">Clinique</span><span class="text-slate-500">+</span>
+                </h1>
+                <button
+                    @click="sidebarOpen = false"
+                    class="lg:hidden text-slate-500 hover:text-slate-700"
+                >
+                    <i class="ti ti-x text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="p-4 space-y-1 text-sm">
+                <a href="/"
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 bg-primary-50 border border-primary-100 hover:bg-primary-100 transition">
+                    <i class="ti ti-layout-dashboard text-lg text-primary-600"></i>
+                    <span>Tableau de bord</span>
+                </a>
+
+                <a href="/patients/"
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100 transition">
+                    <i class="ti ti-users text-lg text-slate-500"></i>
+                    <span>Patients</span>
+                </a>
+
+                <a href="/appointments/"
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100 transition">
+                    <i class="ti ti-calendar text-lg text-slate-500"></i>
+                    <span>Rendez-vous</span>
+                </a>
+
+                <a href="/billing/"
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100 transition">
+                    <i class="ti ti-file-invoice text-lg text-slate-500"></i>
+                    <span>Facturation</span>
+                </a>
+
+                <a href="/admin/"
+                   class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-100 transition">
+                    <i class="ti ti-settings text-lg text-slate-500"></i>
+                    <span>Administration</span>
+                </a>
+            </nav>
+
+            <!-- User Profile -->
+            <div class="absolute inset-x-0 bottom-0 border-t border-slate-200 p-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 text-sm font-semibold">
+                        {{ user.first_name.0|default:"A" }}{{ user.last_name.0|default:"D" }}
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm font-medium text-slate-900">{{ user.get_full_name|default:user.username }}</p>
+                        <p class="text-xs text-slate-500">{{ user.email }}</p>
+                    </div>
+                    <a href="{% url 'admin:logout' %}" class="text-slate-400 hover:text-red-600" title="Déconnexion">
+                        <i class="ti ti-logout text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Contenu principal -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+
+            <!-- Top bar -->
+            <header class="h-14 bg-white border-b border-slate-200 flex items-center justify-between px-4">
+                <button
+                    @click="sidebarOpen = !sidebarOpen"
+                    class="text-slate-500 hover:text-slate-700 lg:hidden"
+                >
+                    <i class="ti ti-menu-2 text-xl"></i>
+                </button>
+
+                <div class="flex-1 max-w-md mx-4">
+                    <div class="relative">
+                        <i class="ti ti-search absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                        <input
+                            type="search"
+                            placeholder="Rechercher..."
+                            class="w-full pl-9 pr-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-sm text-slate-700 focus:ring-1 focus:ring-primary-500 focus:border-primary-500 outline-none"
+                        >
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <button class="relative p-1.5 rounded-full text-slate-500 hover:bg-slate-100 hover:text-slate-700 transition">
+                        <i class="ti ti-bell text-lg"></i>
+                        <span class="absolute top-1 right-1 w-2 h-2 bg-emerald-500 rounded-full"></span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main class="flex-1 overflow-y-auto p-5">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+    </div>
+
+    {% else %}
+        <!-- Layout public (non connecté) -->
+        {% block public_content %}{% endblock %}
+    {% endif %}
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

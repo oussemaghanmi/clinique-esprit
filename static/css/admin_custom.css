@@ -1,0 +1,74 @@
+/* Palette plus moderne */
+:root {
+  --admin-bg: #020617;
+  --admin-panel: #020617;
+  --admin-accent: #22c55e;
+}
+
+/* Fond général */
+body, .dashboard #content {
+  background: linear-gradient(135deg, #020617 0%, #020617 60%, #0f172a 100%);
+}
+
+/* Bandeau du haut */
+#header {
+  background: #020617;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+/* Titre */
+#site-name a, #site-name {
+  color: #e5e7eb;
+}
+
+/* Texte d'aide */
+#header p, #user-tools {
+  color: #9ca3af;
+}
+
+/* Cartes modules */
+.module, .app-auth, .app-patients, .app-billing, .app-appointments {
+  border-radius: 10px;
+  background-color: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+/* Liens et actions */
+a:link, a:visited {
+  color: #22c55e;
+}
+
+a:hover, a:active {
+  color: #4ade80;
+}
+
+/* Boutons principaux */
+.button, input[type=submit], input[type=button], .submit-row input {
+  background: #22c55e;
+  border-radius: 999px;
+  border: none;
+  padding: 6px 16px;
+}
+
+.button:hover, input[type=submit]:hover, .submit-row input:hover {
+  background: #16a34a;
+}
+
+/* Tableau plus clean */
+#content-main table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#content-main table thead {
+  background: rgba(15, 23, 42, 0.95);
+}
+
+/* Scrollbar discrète */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.6);
+  border-radius: 999px;
+}

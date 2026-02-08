@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Administration de la Clinique{% endblock %}
+
+{% block branding %}
+  <div style="display:flex; flex-direction:column; gap:4px;">
+    <h1 id="site-name" style="font-weight:600; letter-spacing:0.03em;">
+      Administration de la Clinique
+    </h1>
+    <p style="margin:0; font-size:0.85rem; opacity:0.85;">
+      Seuls les administrateurs autorisés de notre clinique ont accès à cet espace.
+    </p>
+  </div>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

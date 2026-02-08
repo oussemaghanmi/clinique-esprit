@@ -1,0 +1,163 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Dashboard - Clinique{% endblock %}
+
+{% block content %}
+<div class="space-y-6 animate-fade-in">
+    
+    <!-- Header -->
+    <div>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Tableau de bord</h2>
+        <p class="text-gray-600 dark:text-gray-400 mt-1">Vue d'ensemble de votre clinique</p>
+    </div>
+    
+    <!-- Stats Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Patients -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-lg transition p-6 border border-gray-100 dark:border-gray-700 group">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm font-medium text-gray-600 dark:text-gray-400">Total Patients</p>
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white mt-2">{{ total_patients|default:"1,234" }}</h3>
+                    <p class="text-sm text-green-600 mt-2">
+                        <i class="ti ti-arrow-up text-xs"></i> +12% ce mois
+                    </p>
+                </div>
+                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition">
+                    <i class="ti ti-users text-2xl text-blue-600 dark:text-blue-400"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 2: RDV Today -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-lg transition p-6 border border-gray-100 dark:border-gray-700 group">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm font-medium text-gray-600 dark:text-gray-400">RDV aujourd'hui</p>
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white mt-2">{{ rdv_today|default:"24" }}</h3>
+                    <p class="text-sm text-gray-500 mt-2">8 en attente</p>
+                </div>
+                <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition">
+                    <i class="ti ti-calendar-event text-2xl text-purple-600 dark:text-purple-400"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 3: Revenue -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-lg transition p-6 border border-gray-100 dark:border-gray-700 group">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm font-medium text-gray-600 dark:text-gray-400">Revenu mensuel</p>
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white mt-2">45,231 TND</h3>
+                    <p class="text-sm text-green-600 mt-2">
+                        <i class="ti ti-arrow-up text-xs"></i> +23% vs mois dernier
+                    </p>
+                </div>
+                <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition">
+                    <i class="ti ti-chart-line text-2xl text-green-600 dark:text-green-400"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 4: Pending Payments -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-lg transition p-6 border border-gray-100 dark:border-gray-700 group">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="text-sm font-medium text-gray-600 dark:text-gray-400">Paiements en attente</p>
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white mt-2">12,450 TND</h3>
+                    <p class="text-sm text-orange-600 mt-2">18 factures</p>
+                </div>
+                <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition">
+                    <i class="ti ti-file-invoice text-2xl text-orange-600 dark:text-orange-400"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Charts Row -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Revenue Chart -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 border border-gray-100 dark:border-gray-700">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Évolution du revenu</h3>
+            <canvas id="revenueChart" height="200"></canvas>
+        </div>
+        
+        <!-- Appointments Chart -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 border border-gray-100 dark:border-gray-700">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Rendez-vous par spécialité</h3>
+            <canvas id="appointmentsChart" height="200"></canvas>
+        </div>
+    </div>
+    
+    <!-- Recent Activity -->
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-6 border border-gray-100 dark:border-gray-700">
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Activité récente</h3>
+        <div class="space-y-4">
+            <div class="flex items-center gap-4 p-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-lg transition">
+                <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                    <i class="ti ti-user-plus text-blue-600"></i>
+                </div>
+                <div class="flex-1">
+                    <p class="text-sm font-medium text-gray-900 dark:text-white">Nouveau patient ajouté</p>
+                    <p class="text-xs text-gray-500">Ahmed Ben Ali - il y a 5 minutes</p>
+                </div>
+            </div>
+            <!-- Add more activity items -->
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Revenue Chart
+    const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+    new Chart(revenueCtx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin'],
+            datasets: [{
+                label: 'Revenu (TND)',
+                data: [32000, 35000, 38000, 42000, 41000, 45231],
+                borderColor: '#0ea5e9',
+                backgroundColor: 'rgba(14, 165, 233, 0.1)',
+                tension: 0.4,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false }
+            }
+        }
+    });
+    
+    // Appointments Chart
+    const appointmentsCtx = document.getElementById('appointmentsChart').getContext('2d');
+    new Chart(appointmentsCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Cardiologie', 'Pédiatrie', 'Dermatologie', 'Orthopédie', 'Autres'],
+            datasets: [{
+                data: [30, 25, 20, 15, 10],
+                backgroundColor: [
+                    '#0ea5e9',
+                    '#8b5cf6',
+                    '#ec4899',
+                    '#10b981',
+                    '#f59e0b'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+</script>
+{% endblock %}

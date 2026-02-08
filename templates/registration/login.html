@@ -1,0 +1,14 @@
+{% extends "admin/base_site.html" %}
+
+{% block title %}Connexion - Administration de la Clinique{% endblock %}
+
+{% block content %}
+<div style="max-width: 400px; margin: 0 auto;">
+  <h1 style="margin-bottom: 1rem;">Connexion à l'administration de la clinique</h1>
+  <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1.5rem;">
+    Seuls les administrateurs autorisés sont habilités à se connecter à cet espace sécurisé.
+  </p>
+
+  {{ block.super }}
+</div>
+{% endblock %}

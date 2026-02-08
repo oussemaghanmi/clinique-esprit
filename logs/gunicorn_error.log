@@ -1,0 +1,210 @@
+[2026-02-05 22:03:52 +0000] [14752] [INFO] Starting gunicorn 25.0.1
+[2026-02-05 22:03:52 +0000] [14752] [INFO] Listening at: http://127.0.0.1:8000 (14752)
+[2026-02-05 22:03:52 +0000] [14752] [INFO] Using worker: sync
+[2026-02-05 22:03:52 +0000] [14804] [INFO] Booting worker with pid: 14804
+[2026-02-05 22:03:52 +0000] [14805] [INFO] Booting worker with pid: 14805
+[2026-02-05 22:03:52 +0000] [14806] [INFO] Booting worker with pid: 14806
+[2026-02-05 22:19:40 +0000] [14752] [INFO] Handling signal: term
+[2026-02-05 23:19:40 +0100] [14806] [INFO] Worker exiting (pid: 14806)
+[2026-02-05 23:19:40 +0100] [14804] [INFO] Worker exiting (pid: 14804)
+[2026-02-05 23:19:40 +0100] [14805] [INFO] Worker exiting (pid: 14805)
+[2026-02-05 22:19:40 +0000] [14752] [INFO] Shutting down: Master
+[2026-02-05 22:19:40 +0000] [14935] [INFO] Starting gunicorn 25.0.1
+[2026-02-05 22:19:40 +0000] [14935] [INFO] Listening at: http://127.0.0.1:8000 (14935)
+[2026-02-05 22:19:40 +0000] [14935] [INFO] Using worker: sync
+[2026-02-05 22:19:40 +0000] [14941] [INFO] Booting worker with pid: 14941
+[2026-02-05 22:19:40 +0000] [14942] [INFO] Booting worker with pid: 14942
+[2026-02-05 22:19:41 +0000] [14943] [INFO] Booting worker with pid: 14943
+[2026-02-06 13:15:51 +0000] [821] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 13:15:51 +0000] [821] [INFO] Listening at: http://127.0.0.1:8000 (821)
+[2026-02-06 13:15:51 +0000] [821] [INFO] Using worker: sync
+[2026-02-06 13:15:51 +0000] [1211] [INFO] Booting worker with pid: 1211
+[2026-02-06 13:15:51 +0000] [1222] [INFO] Booting worker with pid: 1222
+[2026-02-06 13:15:51 +0000] [1223] [INFO] Booting worker with pid: 1223
+[2026-02-06 13:27:53 +0000] [821] [INFO] Handling signal: term
+[2026-02-06 14:27:53 +0100] [1223] [INFO] Worker exiting (pid: 1223)
+[2026-02-06 14:27:53 +0100] [1222] [INFO] Worker exiting (pid: 1222)
+[2026-02-06 14:27:53 +0100] [1211] [INFO] Worker exiting (pid: 1211)
+[2026-02-06 13:27:53 +0000] [821] [INFO] Shutting down: Master
+[2026-02-06 13:27:53 +0000] [1765] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 13:27:53 +0000] [1765] [INFO] Listening at: http://127.0.0.1:8000 (1765)
+[2026-02-06 13:27:53 +0000] [1765] [INFO] Using worker: sync
+[2026-02-06 13:27:53 +0000] [1766] [INFO] Booting worker with pid: 1766
+[2026-02-06 13:27:53 +0000] [1767] [INFO] Booting worker with pid: 1767
+[2026-02-06 13:27:53 +0000] [1768] [INFO] Booting worker with pid: 1768
+[2026-02-06 13:53:56 +0000] [1765] [INFO] Handling signal: term
+[2026-02-06 14:53:56 +0100] [1766] [INFO] Worker exiting (pid: 1766)
+[2026-02-06 14:53:56 +0100] [1768] [INFO] Worker exiting (pid: 1768)
+[2026-02-06 14:53:56 +0100] [1767] [INFO] Worker exiting (pid: 1767)
+[2026-02-06 13:53:56 +0000] [1765] [INFO] Shutting down: Master
+[2026-02-06 13:53:56 +0000] [1897] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 13:53:56 +0000] [1897] [INFO] Listening at: http://127.0.0.1:8000 (1897)
+[2026-02-06 13:53:56 +0000] [1897] [INFO] Using worker: sync
+[2026-02-06 13:53:56 +0000] [1899] [INFO] Booting worker with pid: 1899
+[2026-02-06 13:53:56 +0000] [1900] [INFO] Booting worker with pid: 1900
+[2026-02-06 13:53:56 +0000] [1901] [INFO] Booting worker with pid: 1901
+[2026-02-06 14:02:59 +0000] [1897] [INFO] Handling signal: term
+[2026-02-06 15:02:59 +0100] [1899] [INFO] Worker exiting (pid: 1899)
+[2026-02-06 15:02:59 +0100] [1900] [INFO] Worker exiting (pid: 1900)
+[2026-02-06 15:02:59 +0100] [1901] [INFO] Worker exiting (pid: 1901)
+[2026-02-06 14:03:00 +0000] [1897] [INFO] Shutting down: Master
+[2026-02-06 14:03:00 +0000] [1951] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 14:03:00 +0000] [1951] [INFO] Listening at: http://127.0.0.1:8000 (1951)
+[2026-02-06 14:03:00 +0000] [1951] [INFO] Using worker: sync
+[2026-02-06 14:03:00 +0000] [1953] [INFO] Booting worker with pid: 1953
+[2026-02-06 14:03:00 +0000] [1954] [INFO] Booting worker with pid: 1954
+[2026-02-06 14:03:00 +0000] [1955] [INFO] Booting worker with pid: 1955
+[2026-02-06 14:10:40 +0000] [1951] [INFO] Handling signal: term
+[2026-02-06 15:10:40 +0100] [1953] [INFO] Worker exiting (pid: 1953)
+[2026-02-06 15:10:40 +0100] [1954] [INFO] Worker exiting (pid: 1954)
+[2026-02-06 15:10:40 +0100] [1955] [INFO] Worker exiting (pid: 1955)
+[2026-02-06 14:10:41 +0000] [1951] [INFO] Shutting down: Master
+[2026-02-06 14:10:41 +0000] [1997] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 14:10:41 +0000] [1997] [INFO] Listening at: http://127.0.0.1:8000 (1997)
+[2026-02-06 14:10:41 +0000] [1997] [INFO] Using worker: sync
+[2026-02-06 14:10:41 +0000] [2000] [INFO] Booting worker with pid: 2000
+[2026-02-06 14:10:41 +0000] [2001] [INFO] Booting worker with pid: 2001
+[2026-02-06 14:10:41 +0000] [2002] [INFO] Booting worker with pid: 2002
+[2026-02-06 14:11:19 +0000] [1997] [INFO] Handling signal: term
+[2026-02-06 15:11:19 +0100] [2000] [INFO] Worker exiting (pid: 2000)
+[2026-02-06 15:11:19 +0100] [2001] [INFO] Worker exiting (pid: 2001)
+[2026-02-06 15:11:19 +0100] [2002] [INFO] Worker exiting (pid: 2002)
+[2026-02-06 14:11:20 +0000] [1997] [INFO] Shutting down: Master
+[2026-02-06 14:11:20 +0000] [2011] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 14:11:20 +0000] [2011] [INFO] Listening at: http://127.0.0.1:8000 (2011)
+[2026-02-06 14:11:20 +0000] [2011] [INFO] Using worker: sync
+[2026-02-06 14:11:20 +0000] [2013] [INFO] Booting worker with pid: 2013
+[2026-02-06 14:11:20 +0000] [2014] [INFO] Booting worker with pid: 2014
+[2026-02-06 14:11:20 +0000] [2015] [INFO] Booting worker with pid: 2015
+[2026-02-06 14:14:21 +0000] [2011] [INFO] Handling signal: term
+[2026-02-06 15:14:21 +0100] [2014] [INFO] Worker exiting (pid: 2014)
+[2026-02-06 15:14:21 +0100] [2013] [INFO] Worker exiting (pid: 2013)
+[2026-02-06 15:14:21 +0100] [2015] [INFO] Worker exiting (pid: 2015)
+[2026-02-06 14:14:22 +0000] [2011] [INFO] Shutting down: Master
+[2026-02-06 14:14:22 +0000] [2043] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 14:14:22 +0000] [2043] [INFO] Listening at: http://127.0.0.1:8000 (2043)
+[2026-02-06 14:14:22 +0000] [2043] [INFO] Using worker: sync
+[2026-02-06 14:14:22 +0000] [2044] [INFO] Booting worker with pid: 2044
+[2026-02-06 14:14:22 +0000] [2045] [INFO] Booting worker with pid: 2045
+[2026-02-06 14:14:22 +0000] [2046] [INFO] Booting worker with pid: 2046
+[2026-02-06 14:21:40 +0000] [2043] [INFO] Handling signal: term
+[2026-02-06 15:21:40 +0100] [2046] [INFO] Worker exiting (pid: 2046)
+[2026-02-06 15:21:40 +0100] [2044] [INFO] Worker exiting (pid: 2044)
+[2026-02-06 15:21:40 +0100] [2045] [INFO] Worker exiting (pid: 2045)
+[2026-02-06 14:21:41 +0000] [2043] [INFO] Shutting down: Master
+[2026-02-06 14:21:41 +0000] [2097] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 14:21:41 +0000] [2097] [INFO] Listening at: http://127.0.0.1:8000 (2097)
+[2026-02-06 14:21:41 +0000] [2097] [INFO] Using worker: sync
+[2026-02-06 14:21:41 +0000] [2099] [INFO] Booting worker with pid: 2099
+[2026-02-06 14:21:41 +0000] [2100] [INFO] Booting worker with pid: 2100
+[2026-02-06 14:21:41 +0000] [2101] [INFO] Booting worker with pid: 2101
+[2026-02-06 15:22:40 +0100] [2099] [INFO] Worker exiting (pid: 2099)
+[2026-02-06 14:22:40 +0000] [2097] [INFO] Handling signal: term
+[2026-02-06 15:22:40 +0100] [2100] [INFO] Worker exiting (pid: 2100)
+[2026-02-06 15:22:40 +0100] [2101] [INFO] Worker exiting (pid: 2101)
+[2026-02-06 14:22:41 +0000] [2097] [INFO] Worker (pid:2099) was sent SIGTERM!
+[2026-02-06 14:22:41 +0000] [2097] [INFO] Shutting down: Master
+[2026-02-06 14:22:41 +0000] [2114] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 14:22:41 +0000] [2114] [INFO] Listening at: http://127.0.0.1:8000 (2114)
+[2026-02-06 14:22:41 +0000] [2114] [INFO] Using worker: sync
+[2026-02-06 14:22:41 +0000] [2115] [INFO] Booting worker with pid: 2115
+[2026-02-06 14:22:41 +0000] [2116] [INFO] Booting worker with pid: 2116
+[2026-02-06 14:22:41 +0000] [2117] [INFO] Booting worker with pid: 2117
+[2026-02-06 14:29:26 +0000] [2114] [INFO] Handling signal: term
+[2026-02-06 15:29:26 +0100] [2115] [INFO] Worker exiting (pid: 2115)
+[2026-02-06 15:29:26 +0100] [2116] [INFO] Worker exiting (pid: 2116)
+[2026-02-06 15:29:26 +0100] [2117] [INFO] Worker exiting (pid: 2117)
+[2026-02-06 14:29:26 +0000] [2114] [INFO] Shutting down: Master
+[2026-02-06 14:29:26 +0000] [2152] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 14:29:26 +0000] [2152] [INFO] Listening at: http://127.0.0.1:8000 (2152)
+[2026-02-06 14:29:26 +0000] [2152] [INFO] Using worker: sync
+[2026-02-06 14:29:26 +0000] [2154] [INFO] Booting worker with pid: 2154
+[2026-02-06 14:29:26 +0000] [2155] [INFO] Booting worker with pid: 2155
+[2026-02-06 14:29:26 +0000] [2156] [INFO] Booting worker with pid: 2156
+[2026-02-06 14:47:55 +0000] [2152] [INFO] Handling signal: term
+[2026-02-06 15:47:55 +0100] [2155] [INFO] Worker exiting (pid: 2155)
+[2026-02-06 15:47:55 +0100] [2154] [INFO] Worker exiting (pid: 2154)
+[2026-02-06 15:47:55 +0100] [2156] [INFO] Worker exiting (pid: 2156)
+[2026-02-06 14:47:56 +0000] [2152] [INFO] Shutting down: Master
+[2026-02-06 14:47:56 +0000] [2253] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 14:47:56 +0000] [2253] [INFO] Listening at: http://127.0.0.1:8000 (2253)
+[2026-02-06 14:47:56 +0000] [2253] [INFO] Using worker: sync
+[2026-02-06 14:47:56 +0000] [2255] [INFO] Booting worker with pid: 2255
+[2026-02-06 14:47:56 +0000] [2256] [INFO] Booting worker with pid: 2256
+[2026-02-06 14:47:56 +0000] [2257] [INFO] Booting worker with pid: 2257
+[2026-02-06 14:50:06 +0000] [2253] [INFO] Handling signal: term
+[2026-02-06 15:50:06 +0100] [2257] [INFO] Worker exiting (pid: 2257)
+[2026-02-06 15:50:06 +0100] [2255] [INFO] Worker exiting (pid: 2255)
+[2026-02-06 15:50:06 +0100] [2256] [INFO] Worker exiting (pid: 2256)
+[2026-02-06 14:50:06 +0000] [2253] [INFO] Worker (pid:2255) was sent SIGTERM!
+[2026-02-06 14:50:06 +0000] [2253] [INFO] Worker (pid:2257) was sent SIGTERM!
+[2026-02-06 14:50:07 +0000] [2253] [INFO] Shutting down: Master
+[2026-02-06 14:50:07 +0000] [2273] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 14:50:07 +0000] [2273] [INFO] Listening at: http://127.0.0.1:8000 (2273)
+[2026-02-06 14:50:07 +0000] [2273] [INFO] Using worker: sync
+[2026-02-06 14:50:07 +0000] [2274] [INFO] Booting worker with pid: 2274
+[2026-02-06 14:50:07 +0000] [2275] [INFO] Booting worker with pid: 2275
+[2026-02-06 14:50:07 +0000] [2276] [INFO] Booting worker with pid: 2276
+[2026-02-06 14:53:51 +0000] [2273] [INFO] Handling signal: term
+[2026-02-06 15:53:51 +0100] [2274] [INFO] Worker exiting (pid: 2274)
+[2026-02-06 15:53:51 +0100] [2276] [INFO] Worker exiting (pid: 2276)
+[2026-02-06 15:53:51 +0100] [2275] [INFO] Worker exiting (pid: 2275)
+[2026-02-06 14:53:52 +0000] [2273] [INFO] Worker (pid:2276) was sent SIGTERM!
+[2026-02-06 14:53:52 +0000] [2273] [INFO] Shutting down: Master
+[2026-02-06 14:53:52 +0000] [2295] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 14:53:52 +0000] [2295] [INFO] Listening at: http://127.0.0.1:8000 (2295)
+[2026-02-06 14:53:52 +0000] [2295] [INFO] Using worker: sync
+[2026-02-06 14:53:52 +0000] [2297] [INFO] Booting worker with pid: 2297
+[2026-02-06 14:53:52 +0000] [2298] [INFO] Booting worker with pid: 2298
+[2026-02-06 14:53:52 +0000] [2299] [INFO] Booting worker with pid: 2299
+[2026-02-06 14:53:53 +0000] [2295] [INFO] Handling signal: term
+[2026-02-06 15:53:53 +0100] [2297] [INFO] Worker exiting (pid: 2297)
+[2026-02-06 15:53:53 +0100] [2298] [INFO] Worker exiting (pid: 2298)
+[2026-02-06 15:53:53 +0100] [2299] [INFO] Worker exiting (pid: 2299)
+[2026-02-06 14:53:53 +0000] [2295] [INFO] Worker (pid:2297) was sent SIGTERM!
+[2026-02-06 14:53:53 +0000] [2295] [INFO] Worker (pid:2298) was sent SIGTERM!
+[2026-02-06 14:53:53 +0000] [2295] [INFO] Worker (pid:2299) was sent SIGTERM!
+[2026-02-06 14:53:53 +0000] [2295] [INFO] Shutting down: Master
+[2026-02-06 14:53:53 +0000] [2305] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 14:53:53 +0000] [2305] [INFO] Listening at: http://127.0.0.1:8000 (2305)
+[2026-02-06 14:53:53 +0000] [2305] [INFO] Using worker: sync
+[2026-02-06 14:53:53 +0000] [2307] [INFO] Booting worker with pid: 2307
+[2026-02-06 14:53:53 +0000] [2308] [INFO] Booting worker with pid: 2308
+[2026-02-06 14:53:53 +0000] [2309] [INFO] Booting worker with pid: 2309
+[2026-02-06 16:25:06 +0100] [2308] [INFO] Worker exiting (pid: 2308)
+[2026-02-06 16:25:06 +0100] [2307] [INFO] Worker exiting (pid: 2307)
+[2026-02-06 15:25:06 +0000] [2305] [INFO] Handling signal: term
+[2026-02-06 16:25:06 +0100] [2309] [INFO] Worker exiting (pid: 2309)
+[2026-02-06 15:25:06 +0000] [2305] [INFO] Worker (pid:2307) was sent SIGTERM!
+[2026-02-06 15:25:06 +0000] [2305] [INFO] Worker (pid:2308) was sent SIGTERM!
+[2026-02-06 15:25:06 +0000] [2305] [INFO] Shutting down: Master
+[2026-02-06 15:25:07 +0000] [2436] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 15:25:07 +0000] [2436] [INFO] Listening at: http://127.0.0.1:8000 (2436)
+[2026-02-06 15:25:07 +0000] [2436] [INFO] Using worker: sync
+[2026-02-06 15:25:07 +0000] [2438] [INFO] Booting worker with pid: 2438
+[2026-02-06 15:25:07 +0000] [2439] [INFO] Booting worker with pid: 2439
+[2026-02-06 15:25:07 +0000] [2440] [INFO] Booting worker with pid: 2440
+[2026-02-06 16:40:20 +0100] [2440] [INFO] Worker exiting (pid: 2440)
+[2026-02-06 16:40:20 +0100] [2439] [INFO] Worker exiting (pid: 2439)
+[2026-02-06 16:40:20 +0100] [2438] [INFO] Worker exiting (pid: 2438)
+[2026-02-06 15:40:20 +0000] [2436] [INFO] Handling signal: term
+[2026-02-06 15:40:20 +0000] [2436] [INFO] Worker (pid:2438) was sent SIGTERM!
+[2026-02-06 15:40:20 +0000] [2436] [INFO] Worker (pid:2439) was sent SIGTERM!
+[2026-02-06 15:40:20 +0000] [2436] [INFO] Worker (pid:2440) was sent SIGTERM!
+[2026-02-06 15:40:20 +0000] [2436] [INFO] Shutting down: Master
+[2026-02-06 15:40:20 +0000] [2497] [INFO] Starting gunicorn 25.0.1
+[2026-02-06 15:40:20 +0000] [2497] [INFO] Listening at: http://127.0.0.1:8000 (2497)
+[2026-02-06 15:40:20 +0000] [2497] [INFO] Using worker: sync
+[2026-02-06 15:40:20 +0000] [2498] [INFO] Booting worker with pid: 2498
+[2026-02-06 15:40:20 +0000] [2499] [INFO] Booting worker with pid: 2499
+[2026-02-06 15:40:20 +0000] [2500] [INFO] Booting worker with pid: 2500
+[2026-02-06 15:46:46 +0000] [2497] [CRITICAL] WORKER TIMEOUT (pid:2499)
+[2026-02-06 16:46:47 +0100] [2499] [INFO] Worker exiting (pid: 2499)
+[2026-02-07 12:18:27 +0000] [2497] [ERROR] Worker (pid:2499) exited with code 1.
+[2026-02-07 12:18:27 +0000] [2566] [INFO] Booting worker with pid: 2566
+[2026-02-08 20:39:31 +0000] [811] [INFO] Starting gunicorn 25.0.1
+[2026-02-08 20:39:31 +0000] [811] [INFO] Listening at: http://127.0.0.1:8000 (811)
+[2026-02-08 20:39:31 +0000] [811] [INFO] Using worker: sync
+[2026-02-08 20:39:31 +0000] [1259] [INFO] Booting worker with pid: 1259
+[2026-02-08 20:39:31 +0000] [1267] [INFO] Booting worker with pid: 1267
+[2026-02-08 20:39:31 +0000] [1269] [INFO] Booting worker with pid: 1269
