@@ -5,6 +5,7 @@ class Command(BaseCommand):
     help = "Create or reset default admin user"
 
     def handle(self, *args, **options):
+        print(">>> RUNNING create_default_admin <<<")
         User = get_user_model()
         username = "admin"
         password = "Admin@Clinic2026"
@@ -28,4 +29,3 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS("Superuser 'admin' password reset."))
         else:
             self.stdout.write(self.style.SUCCESS("Superuser 'admin' created."))
-
