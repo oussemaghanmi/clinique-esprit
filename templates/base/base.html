@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
@@ -87,7 +88,7 @@
             <!-- Logo -->
             <div class="flex items-center justify-between h-16 px-6 border-b border-slate-200">
                 <h1 class="text-xl font-semibold text-slate-900">
-                    <span class="text-primary-600">Clinique</span><span class="text-slate-500">+</span>
+                    <img src="{% static 'img/clinic.png' %}" alt="Clinique Esprit" class="h-10">
                 </h1>
                 <button
                     @click="sidebarOpen = false"
