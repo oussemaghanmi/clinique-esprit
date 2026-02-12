@@ -130,5 +130,3 @@ if DEBUG:
     except Exception:
         # Ne jamais casser le démarrage si la DB n'est pas prête
         pass
-
-c'est mon code donne le code complet après modification
