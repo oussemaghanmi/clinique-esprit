@@ -116,7 +116,6 @@ LOGOUT_REDIRECT_URL = '/admin/login/'
 # Configuration HTTPS
 CSRF_TRUSTED_ORIGINS = ['https://192.168.210.50']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
 # Création automatique d'un superuser admin si aucun n'existe (pour Render / démo)
 if DEBUG:
     try:
@@ -132,45 +131,4 @@ if DEBUG:
         # Ne jamais casser le démarrage si la DB n'est pas prête
         pass
 
-
-# ========== CONFIGURATION LOGGING VERS VM ==========
-from logging.handlers import SysLogHandler
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '[%(levelname)s] %(asctime)s %(name)s: %(message)s'
-        },
-    },
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-            'formatter': 'verbose',
-        },
-        'syslog': {
-            'class': 'logging.handlers.SysLogHandler',
-            'address': (os.environ.get('SYSLOG_HOST', 'localhost'), 514),
-            'facility': SysLogHandler.LOG_LOCAL0,
-            'socktype': 1,  # TCP
-            'formatter': 'verbose',
-        },
-    },
-    'root': {
-        'handlers': ['console', 'syslog'],
-        'level': 'INFO',
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console', 'syslog'],
-            'level': 'INFO',
-            'propagate': False,
-        },
-        'django.request': {
-            'handlers': ['console', 'syslog'],
-            'level': 'INFO',
-            'propagate': False,
-        },
-    },
-}
+c'est mon code donne le code complet après modification
